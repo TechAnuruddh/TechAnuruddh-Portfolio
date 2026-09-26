@@ -1,210 +1,1062 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anuruddh Yadav | Portfolio</title>
+    <title>Anuruddh Yadav | Software Engineer &amp; AI/ML Engineer | Portfolio</title>
     <meta
       name="description"
-      content="Hi, I’m Anuruddh Yadav — a passionate Web Developer skilled in React, Django & JavaScript. Explore my projects, skills & services."
+      content="Portfolio of Anuruddh Yadav — Software Engineer and AI/ML Engineer specialising in Python, Django, React.js, and Machine Learning. Explore projects, certifications, and get in touch."
     />
-
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- CSS File -->
+    <meta name="author" content="Anuruddh Yadav" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Header -->
+    <!-- Ambient Moving Glow Background -->
+    <div class="ambient-orbs" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <!-- ============================================================
+         HEADER / NAVIGATION
+         ============================================================ -->
     <header>
-      <div class="logo">Techanuruddh</div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="menu-btn">☰</div>
+      <div class="navbar">
+        <a href="#home" class="logo" aria-label="TechAnuruddh Home">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="url(#logo-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 17L12 22L22 17M2 12L12 17L22 12" stroke="url(#logo-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#06b6d4"/>
+                <stop offset="1" stop-color="#3b82f6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span>TechAnuruddh</span>
+        </a>
+
+        <nav aria-label="Primary Navigation">
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact" class="nav-btn">Let's Talk</a></li>
+          </ul>
+        </nav>
+
+        <button class="menu-btn" id="menu-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-links">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-text">
-        <h2>Hello<span class="dot">,</span></h2>
-        <h1>I’m <span class="highlight">Anuruddh Yadav</span></h1>
-        <h3><span id="typing"></span><span class="cursor">|</span></h3>
-        <div class="buttons">
-          <a href="#projects" class="btn primary">Got a project?</a>
-          <a href="resume.pdf" class="btn secondary" download>Download CV</a>
-        </div>
-      </div>
-      <div class="hero-img">
-        <img src="profile.png" alt="Profile Photo" />
-      </div>
-    </section>
+    <!-- ============================================================
+         MAIN CONTENT
+         ============================================================ -->
+    <main>
+      <!-- ============================================================
+           HERO SECTION
+           ============================================================ -->
+      <section id="home" class="hero">
+        <!-- Lightweight Canvas Particle Background -->
+        <canvas id="hero-particles" aria-hidden="true"></canvas>
 
-    <!-- Skills -->
-    <section id="skills">
-      <h2 class="skills-title">My Skills</h2>
-      <div class="skills-container">
-        <span class="skill-box">Python</span>
-        <span class="skill-box">HTML5</span>
-        <span class="skill-box">CSS3</span>
-        <span class="skill-box">JavaScript</span>
-        <span class="skill-box">React</span>
-        <span class="skill-box">Django</span>
-        <span class="skill-box">Git & GitHub</span>
-        <span class="skill-box">Video Editing</span>
-      </div>
-    </section>
+        <!-- LEFT: Text content -->
+        <div class="hero-content animate-fade-in-left delay-1">
+          <div class="hero-badge">
+            <span aria-hidden="true"></span> Available for Opportunities
+          </div>
 
-    <!-- About -->
-    <section id="about" class="about">
-      <h2>About Me</h2>
-      <p>
-        I am a final-year BCA student passionate about web development, with
-        strong skills in HTML, CSS, JavaScript, and Python, along with hands-on
-        experience in React and Django.
-      </p>
-      <p>
-        I have successfully developed projects such as an e-commerce website and
-        a task management application. My goal is to grow as a full-stack
-        developer by building user-friendly and impactful digital solutions.
-      </p>
-      <p>
-        In addition to coding, I stay updated with the latest tech trends and
-        enjoy exploring new technologies. Feel free to connect with me at
-        <a href="mailto:anuruddhyadav933@gmail.com"
-          >anuruddhyadav933@gmail.com</a
-        >.
-      </p>
-      <div class="stats">
-        <div>
-          <h3>10+</h3>
-          <p>Completed Projects</p>
-        </div>
-        <div>
-          <h3>75%</h3>
-          <p>Client Satisfaction</p>
-        </div>
-        <div>
-          <h3>1+</h3>
-          <p>Years of Experience</p>
-        </div>
-      </div>
-    </section>
+          <h1 class="hero-title text-gradient">
+            Hi, I'm <span>Anuruddh Yadav</span>
+          </h1>
 
-    <!-- Services -->
-    <section id="services" class="services">
-      <h2>My Services</h2>
-      <div class="service">
-        <img src="web.png" alt="Web Development" />
-        <h3>Website Development</h3>
-      </div>
-      <div class="service">
-        <img src="app.png" alt="App Development" />
-        <h3>App Development</h3>
-      </div>
-      <div class="service">
-        <img src="main.png" alt="Website Maintenance" />
-        <h3>Website Maintenance</h3>
-      </div>
-    </section>
+          <h2 class="hero-subtitle">
+            A <span id="typing" aria-live="polite"></span><span class="typing-cursor" aria-hidden="true"></span>
+          </h2>
 
-    <!-- Projects -->
-    <section id="projects" class="projects">
-      <h2>My Projects</h2>
-      <div class="projects-container">
-        <div class="project-card">
-          <img src="Ai.png" alt="Virtual Assistant" />
-          <h3>Virtual Assistant</h3>
-          <p>
-            A web-based Virtual Assistant built with HTML, CSS, and JavaScript.
-            It responds to voice commands, searches the web, opens websites, and
-            assists in daily tasks
+          <p class="hero-description">
+            I build scalable full-stack applications, AI-powered solutions, and
+            intelligent digital experiences using modern technologies.
           </p>
-          <a
-            href="https://github.com/TechAnuruddh/Virtual-assistant"
-            target="_blank"
-            class="btn primary"
-            >View Project</a
-          >
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary" id="explore-work-btn">
+              Explore My Work
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="Anuruddh Resume (2).pdf" class="btn-secondary" id="download-resume-btn" download>
+              Download Resume
+              <svg class="btn-download" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Mini Stats Grid -->
+          <div class="hero-stats-grid" role="list">
+            <div class="hero-stat-card glass-panel animate-fade-in-up delay-4" role="listitem">
+              <div class="hero-stat-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <span class="hero-stat-text">3+ Projects Built</span>
+            </div>
+            <div class="hero-stat-card glass-panel animate-fade-in-up delay-4" role="listitem">
+              <div class="hero-stat-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <span class="hero-stat-text">Python Full Stack Developer</span>
+            </div>
+            <div class="hero-stat-card glass-panel animate-fade-in-up delay-4" role="listitem">
+              <div class="hero-stat-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+              </div>
+              <span class="hero-stat-text">AI &amp; Machine Learning</span>
+            </div>
+            <div class="hero-stat-card glass-panel animate-fade-in-up delay-4" role="listitem">
+              <div class="hero-stat-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3z"></path>
+                  <path d="M6 21a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3v12a3 3 0 0 0 3 3z"></path>
+                </svg>
+              </div>
+              <span class="hero-stat-text">DSA Problem Solving</span>
+            </div>
+          </div>
         </div>
 
-        <div class="project-card">
-          <img src="taskapp.png" alt="Task Manager App" />
-          <h3>Task Manager App</h3>
-          <p>
-            A productivity app for creating, editing, and managing daily tasks
-            with a clean UI using React and local storage.
-          </p>
-          <a
-            href="https://github.com/yourgithub/taskmanager"
-            target="_blank"
-            class="btn primary"
-            >View Project</a
-          >
+        <!-- RIGHT: Profile image — no rotating ring -->
+        <div class="hero-visual animate-fade-in-right delay-2">
+          <div class="hero-visual-bg" aria-hidden="true"></div>
+          <div class="profile-container-wrapper">
+            <div class="profile-card">
+              <img src="profile.png" alt="Anuruddh Yadav — Software Engineer &amp; AI/ML Engineer" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           ABOUT ME SECTION
+           ============================================================ -->
+      <section id="about" class="about">
+        <div class="section-header animate-fade-in-up">
+          <h2 class="section-title text-gradient">About Me</h2>
+          <p class="section-desc">Turning ideas into intelligent digital solutions.</p>
         </div>
 
-        <div class="project-card">
-          <img src="portfolio.png" alt="Portfolio Website" />
-          <h3>Personal Portfolio</h3>
-          <p>
-            This responsive portfolio site built with HTML, CSS, and JavaScript
-            showcases my projects and skills.
+        <div class="about-grid">
+          <!-- Left: Bio text -->
+          <div class="about-text animate-fade-in-left delay-2">
+            <p>
+              I am <span class="highlight-text">Anuruddh Yadav</span>, a
+              <span class="accent-gradient">Software Engineer</span> and
+              <span class="accent-gradient">AI/ML Engineer</span> focused on
+              designing and developing intelligent, scalable, and
+              production-ready software solutions.
+            </p>
+            <p>
+              I am currently pursuing my
+              <span class="highlight-text">Master of Computer Applications (MCA)</span>
+              from
+              <span class="highlight-text">Dr. A.P.J. Abdul Kalam Abdul Technical University (AKTU)</span>,
+              after completing my
+              <span class="highlight-text">Bachelor of Computer Applications (BCA)</span>
+              from the
+              <span class="highlight-text">University of Lucknow</span>. My technical
+              interests lie at the intersection of Software Engineering,
+              Full-Stack Development, Artificial Intelligence, and Machine
+              Learning.
+            </p>
+            <p>
+              My core technical expertise includes
+              <span class="highlight-text">Python</span>,
+              <span class="highlight-text">Django</span>,
+              <span class="highlight-text">React.js</span>,
+              <span class="highlight-text">RESTful APIs</span>, and
+              <span class="highlight-text">Machine Learning</span>. I enjoy
+              transforming complex problems into efficient, maintainable, and
+              user-centric solutions while continuously exploring modern
+              technologies, development methodologies, and engineering best
+              practices.
+            </p>
+            <p>
+              As part of my development journey, I have built projects such as
+              <span class="accent-gradient">DocX — an AI-powered Smart Healthcare Assistant</span>,
+              leveraging Python and Django to develop a practical,
+              technology-driven solution for real-world use cases.
+            </p>
+            <p>
+              I bring strong problem-solving, analytical thinking, adaptability,
+              and rapid learning abilities, with a continuous focus on
+              strengthening my technical expertise and developing high-quality
+              software solutions.
+            </p>
+            <p>
+              My long-term objective is to engineer impactful AI-driven products,
+              contribute to innovative engineering teams, and solve complex
+              real-world challenges through intelligent and reliable software.
+            </p>
+          </div>
+
+          <!-- Right: Summary cards -->
+          <div class="about-cards-grid animate-fade-in-right delay-2">
+            <!-- Card 1 -->
+            <div class="about-card glass-panel">
+              <div class="about-card-icon-container" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#about-icon-grad-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                  <defs>
+                    <linearGradient id="about-icon-grad-1" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#06b6d4"/>
+                      <stop offset="1" stop-color="#3b82f6"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3 class="about-card-title text-gradient">3+ Projects</h3>
+              <p class="about-card-desc">AI and Full Stack Applications</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="about-card glass-panel">
+              <div class="about-card-icon-container" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#about-icon-grad-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                  <defs>
+                    <linearGradient id="about-icon-grad-2" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#3b82f6"/>
+                      <stop offset="1" stop-color="#8b5cf6"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3 class="about-card-title text-gradient">Python &amp; Django</h3>
+              <p class="about-card-desc">Backend Development Expertise</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="about-card glass-panel">
+              <div class="about-card-icon-container" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#about-icon-grad-3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                  <path d="M12 6v12M6 12h12"></path>
+                  <defs>
+                    <linearGradient id="about-icon-grad-3" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#8b5cf6"/>
+                      <stop offset="1" stop-color="#ec4899"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3 class="about-card-title text-gradient">AI / ML</h3>
+              <p class="about-card-desc">Machine Learning &amp; Generative AI</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="about-card glass-panel">
+              <div class="about-card-icon-container" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#about-icon-grad-4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3z"></path>
+                  <path d="M6 21a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3v12a3 3 0 0 0 3 3z"></path>
+                  <defs>
+                    <linearGradient id="about-icon-grad-4" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#f59e0b"/>
+                      <stop offset="1" stop-color="#ef4444"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3 class="about-card-title text-gradient">DSA</h3>
+              <p class="about-card-desc">Problem Solving &amp; Algorithms</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           TECHNICAL EXPERTISE / SKILLS SECTION
+           ============================================================ -->
+      <section id="skills" class="skills">
+        <div class="section-header animate-fade-in-up">
+          <h2 class="section-title text-gradient">Technical Expertise</h2>
+          <p class="section-desc">
+            Technologies I use to transform ideas into intelligent digital products.
           </p>
-          <a
-            href="https://github.com/yourgithub/portfolio"
-            target="_blank"
-            class="btn primary"
-            >View Project</a
-          >
+        </div>
+
+        <div class="skills-showcase-grid">
+          <!-- Category 1: Programming Languages -->
+          <div class="skills-card animate-fade-in-up delay-1">
+            <h3 class="skills-card-title text-gradient">
+              <span class="skills-card-dot color-1"></span> Programming Languages
+            </h3>
+            <div class="skills-badges-list">
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M2 12h20" stroke="url(#python-grad)"/>
+                  <circle cx="7" cy="7" r="3" fill="url(#python-grad)" stroke="none"/>
+                  <circle cx="17" cy="17" r="3" fill="url(#python-grad)" stroke="none"/>
+                  <defs><linearGradient id="python-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#3b82f6"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs>
+                </svg>
+                <span>Python</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1" stroke="url(#java-grad)"/>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" stroke="url(#java-grad)"/>
+                  <line x1="6" y1="1" x2="6" y2="4" stroke="url(#java-grad)"/>
+                  <line x1="10" y1="1" x2="10" y2="4" stroke="url(#java-grad)"/>
+                  <line x1="14" y1="1" x2="14" y2="4" stroke="url(#java-grad)"/>
+                  <defs><linearGradient id="java-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#f59e0b"/><stop offset="1" stop-color="#ef4444"/></linearGradient></defs>
+                </svg>
+                <span>Java</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" stroke="url(#js-grad)"/>
+                  <path d="M9 17v-2a2 2 0 0 1 4 0v4" stroke="url(#js-grad)"/>
+                  <defs><linearGradient id="js-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#fbbf24"/><stop offset="1" stop-color="#f59e0b"/></linearGradient></defs>
+                </svg>
+                <span>JavaScript</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3" stroke="url(#sql-grad)"/>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" stroke="url(#sql-grad)"/>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" stroke="url(#sql-grad)"/>
+                  <defs><linearGradient id="sql-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#06b6d4"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+                </svg>
+                <span>SQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Frontend Development -->
+          <div class="skills-card animate-fade-in-up delay-2">
+            <h3 class="skills-card-title text-gradient">
+              <span class="skills-card-dot color-2"></span> Frontend Development
+            </h3>
+            <div class="skills-badges-list">
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4l16 16M4 20L20 4" stroke="url(#html-grad)"/>
+                  <defs><linearGradient id="html-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#f97316"/><stop offset="1" stop-color="#ef4444"/></linearGradient></defs>
+                </svg>
+                <span>HTML5</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" stroke="url(#css-grad)"/>
+                  <path d="M8 21h8M12 17v4" stroke="url(#css-grad)"/>
+                  <defs><linearGradient id="css-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#3b82f6"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs>
+                </svg>
+                <span>CSS3</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="2" stroke="url(#react-grad)"/>
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="url(#react-grad)"/>
+                  <defs><linearGradient id="react-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#06b6d4"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs>
+                </svg>
+                <span>React.js</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" stroke="url(#js-grad2)"/>
+                  <path d="M9 9h6M9 12h6M9 15h4" stroke="url(#js-grad2)"/>
+                  <defs><linearGradient id="js-grad2" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#fbbf24"/><stop offset="1" stop-color="#f59e0b"/></linearGradient></defs>
+                </svg>
+                <span>JavaScript ES6+</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 3h14M12 3v18M5 21h14" stroke="url(#bootstrap-grad)"/>
+                  <defs><linearGradient id="bootstrap-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs>
+                </svg>
+                <span>Bootstrap</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Backend Development -->
+          <div class="skills-card animate-fade-in-up delay-3">
+            <h3 class="skills-card-title text-gradient">
+              <span class="skills-card-dot color-3"></span> Backend Development
+            </h3>
+            <div class="skills-badges-list">
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1" stroke="url(#django-grad)"/>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" stroke="url(#django-grad)"/>
+                  <defs><linearGradient id="django-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#10b981"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs>
+                </svg>
+                <span>Django</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="url(#api-grad)"/>
+                  <defs><linearGradient id="api-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#3b82f6"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+                </svg>
+                <span>REST APIs</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" stroke="url(#drf-grad)"/>
+                  <path d="M9 12h6M12 9v6" stroke="url(#drf-grad)"/>
+                  <defs><linearGradient id="drf-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#ef4444"/><stop offset="1" stop-color="#f59e0b"/></linearGradient></defs>
+                </svg>
+                <span>Django REST Framework</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3z" stroke="url(#flask-grad)"/>
+                  <defs><linearGradient id="flask-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#f59e0b"/><stop offset="1" stop-color="#10b981"/></linearGradient></defs>
+                </svg>
+                <span>Flask</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: AI & Machine Learning -->
+          <div class="skills-card animate-fade-in-up delay-1">
+            <h3 class="skills-card-title text-gradient">
+              <span class="skills-card-dot color-4"></span> AI &amp; Machine Learning
+            </h3>
+            <div class="skills-badges-list">
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" stroke="url(#ml-grad)"/>
+                  <path d="M12 8v8M8 12h8" stroke="url(#ml-grad)"/>
+                  <defs><linearGradient id="ml-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#f59e0b"/><stop offset="1" stop-color="#ef4444"/></linearGradient></defs>
+                </svg>
+                <span>Machine Learning</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="url(#dl-grad)"/>
+                  <defs><linearGradient id="dl-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#ef4444"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+                </svg>
+                <span>Deep Learning</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" stroke="url(#genai-grad)"/>
+                  <path d="M8 12h8M12 8v8" stroke="url(#genai-grad)"/>
+                  <defs><linearGradient id="genai-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#06b6d4"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+                </svg>
+                <span>Generative AI</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="url(#nlp-grad)"/>
+                  <defs><linearGradient id="nlp-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#3b82f6"/><stop offset="1" stop-color="#10b981"/></linearGradient></defs>
+                </svg>
+                <span>NLP</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M2 12h20" stroke="url(#numpy-grad)"/>
+                  <defs><linearGradient id="numpy-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#3b82f6"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs>
+                </svg>
+                <span>NumPy &amp; Pandas</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" stroke="url(#sklearn-grad)"/>
+                  <path d="M8 12l2 2 4-4" stroke="url(#sklearn-grad)"/>
+                  <defs><linearGradient id="sklearn-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#f59e0b"/><stop offset="1" stop-color="#ef4444"/></linearGradient></defs>
+                </svg>
+                <span>Scikit-Learn</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 5: Database & Tools -->
+          <div class="skills-card animate-fade-in-up delay-2">
+            <h3 class="skills-card-title text-gradient">
+              <span class="skills-card-dot color-5"></span> Database &amp; Tools
+            </h3>
+            <div class="skills-badges-list">
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3" stroke="url(#mysql-grad)"/>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" stroke="url(#mysql-grad)"/>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" stroke="url(#mysql-grad)"/>
+                  <defs><linearGradient id="mysql-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#3b82f6"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs>
+                </svg>
+                <span>MySQL</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="url(#git-grad)"/>
+                  <defs><linearGradient id="git-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#f59e0b"/><stop offset="1" stop-color="#ef4444"/></linearGradient></defs>
+                </svg>
+                <span>Git &amp; GitHub</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" stroke="url(#linux-grad)"/>
+                  <path d="M8 21h8M12 17v4" stroke="url(#linux-grad)"/>
+                  <defs><linearGradient id="linux-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#f59e0b"/><stop offset="1" stop-color="#10b981"/></linearGradient></defs>
+                </svg>
+                <span>Linux</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" stroke="url(#vscode-grad)"/>
+                  <path d="M9 9l6 6M15 9l-6 6" stroke="url(#vscode-grad)"/>
+                  <defs><linearGradient id="vscode-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#3b82f6"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs>
+                </svg>
+                <span>VS Code</span>
+              </div>
+              <div class="tech-badge">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="url(#postman-grad)"/>
+                  <defs><linearGradient id="postman-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#f97316"/><stop offset="1" stop-color="#ef4444"/></linearGradient></defs>
+                </svg>
+                <span>Postman</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           FEATURED PROJECTS SECTION
+           ============================================================ -->
+      <section id="projects" class="projects">
+        <div class="section-header animate-fade-in-up">
+          <h2 class="section-title text-gradient">Featured Projects</h2>
+          <p class="section-desc">
+            Real-world applications built using Full Stack Development and Artificial Intelligence.
+          </p>
+        </div>
+
+        <div class="projects-grid animate-fade-in-up delay-2">
+          <!-- Project 1: AI Healthcare Assistant -->
+          <div class="project-card glass-panel">
+            <div class="project-image-container">
+              <img src="Docx.png" alt="AI Healthcare Assistant (DocX AI) — Python Django ML Project" />
+              <div class="project-overlay">
+                <span class="project-tag">AI &amp; Full Stack</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title text-gradient">AI Healthcare Assistant (DocX AI)</h3>
+              <p class="project-desc">
+                An intelligent healthcare platform using Python and Django with Machine Learning for disease prediction, symptom analysis, and AI-powered guidance.
+              </p>
+              <ul class="project-features-list">
+                <li>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  AI-based symptom analysis
+                </li>
+                <li>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Disease prediction system
+                </li>
+                <li>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Interactive AI chatbot
+                </li>
+                <li>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Secure healthcare data management
+                </li>
+              </ul>
+              <div class="project-tech">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Django</span>
+                <span class="tech-badge">Machine Learning</span>
+                <span class="tech-badge">MySQL</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/TechAnuruddh/DocX-AI-Smart-Healthcare-Assistant" class="project-link primary" target="_blank" rel="noopener">Live Demo</a>
+                <a href="https://github.com/TechAnuruddh/DocX-AI-Smart-Healthcare-Assistant" class="project-link secondary" target="_blank" rel="noopener">GitHub Repo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: E-Commerce Web Application -->
+          <div class="project-card glass-panel">
+            <div class="project-image-container">
+              <img src="web.png" alt="E-Commerce Web Application — Django React MySQL" />
+              <div class="project-overlay">
+                <span class="project-tag">Full Stack</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title text-gradient">E-Commerce Web Application</h3>
+              <p class="project-desc">
+                A complete full-stack shopping platform with authentication, REST APIs, database management, and a responsive modern user interface.
+              </p>
+              <ul class="project-features-list">
+                <li>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  User authentication &amp; profiles
+                </li>
+                <li>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Product management system
+                </li>
+                <li>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Shopping cart &amp; checkout
+                </li>
+                <li>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  REST API integration
+                </li>
+              </ul>
+              <div class="project-tech">
+                <span class="tech-badge">Django</span>
+                <span class="tech-badge">React.js</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">REST API</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/TechAnuruddh" class="project-link primary" target="_blank" rel="noopener">Live Demo</a>
+                <a href="https://github.com/TechAnuruddh" class="project-link secondary" target="_blank" rel="noopener">GitHub Repo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: AI Virtual Assistant -->
+          <div class="project-card glass-panel">
+            <div class="project-image-container">
+              <img src="Ai.png" alt="AI Virtual Assistant — JavaScript Web Speech API" />
+              <div class="project-overlay">
+                <span class="project-tag">AI Voice API</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title text-gradient">AI Virtual Assistant</h3>
+              <p class="project-desc">
+                A browser-based intelligent voice assistant capable of understanding commands and performing tasks through speech recognition and Web APIs.
+              </p>
+              <ul class="project-features-list">
+                <li>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Voice command recognition
+                </li>
+                <li>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Speech synthesis &amp; responses
+                </li>
+                <li>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Real-time AI responses
+                </li>
+                <li>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Browser automation features
+                </li>
+              </ul>
+              <div class="project-tech">
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">Web Speech API</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/TechAnuruddh/Virtual-assistant" class="project-link primary" target="_blank" rel="noopener">Live Demo</a>
+                <a href="https://github.com/TechAnuruddh/Virtual-assistant" class="project-link secondary" target="_blank" rel="noopener">GitHub Repo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           EXPERIENCE SECTION
+           ============================================================ -->
+      <section id="experience" class="experience">
+        <div class="section-header animate-fade-in-up">
+          <span class="section-subtitle">Professional Path</span>
+          <h2 class="section-title text-gradient">Experience</h2>
+        </div>
+
+        <div class="experience-showcase glass-panel animate-fade-in-up delay-1">
+          <div class="exp-header">
+            <div class="exp-role-badge">Featured Role</div>
+            <h3 class="exp-role-title text-gradient">Software Engineer &amp; AI/ML Engineer</h3>
+            <p class="exp-role-summary">
+              Building real-world applications across Full-Stack Development, AI/ML, and Software Engineering.
+            </p>
+          </div>
+
+          <div class="exp-highlights-grid">
+            <!-- Highlight 1 -->
+            <div class="exp-highlight-card">
+              <div class="exp-highlight-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div class="exp-highlight-content">
+                <h4 class="exp-highlight-title">Python Full Stack</h4>
+                <p class="exp-highlight-text">Python, Django, React.js, REST APIs &amp; Databases</p>
+              </div>
+            </div>
+
+            <!-- Highlight 2 -->
+            <div class="exp-highlight-card">
+              <div class="exp-highlight-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                </svg>
+              </div>
+              <div class="exp-highlight-content">
+                <h4 class="exp-highlight-title">Projects</h4>
+                <p class="exp-highlight-text">AI Smart Healthcare Assistant, Virtual Assistant &amp; E-Commerce Platform</p>
+              </div>
+            </div>
+
+            <!-- Highlight 3 -->
+            <div class="exp-highlight-card">
+              <div class="exp-highlight-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+              </div>
+              <div class="exp-highlight-content">
+                <h4 class="exp-highlight-title">Problem Solving</h4>
+                <p class="exp-highlight-text">500+ LeetCode problems solved, with a strong focus on DSA &amp; optimization</p>
+              </div>
+            </div>
+
+            <!-- Highlight 4 -->
+            <div class="exp-highlight-card">
+              <div class="exp-highlight-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                </svg>
+              </div>
+              <div class="exp-highlight-content">
+                <h4 class="exp-highlight-title">Engineering Focus</h4>
+                <p class="exp-highlight-text">Focused on building scalable, efficient, and user-centric software solutions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           EDUCATION SECTION
+           ============================================================ -->
+      <section id="education" class="education">
+        <div class="section-header animate-fade-in-up">
+          <span class="section-subtitle">Academic Credentials</span>
+          <h2 class="section-title text-gradient">Education</h2>
+        </div>
+
+        <div class="education-grid">
+          <!-- Education 1: MCA -->
+          <div class="edu-card glass-panel animate-fade-in-up delay-1">
+            <div class="edu-card-top">
+              <div class="edu-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                </svg>
+              </div>
+              <span class="edu-status-badge pursuing">Currently Pursuing</span>
+            </div>
+            <h3 class="edu-degree text-gradient">Master of Computer Applications (MCA)</h3>
+            <div class="edu-school">Dr. A.P.J. Abdul Kalam Technical University (AKTU)</div>
+          </div>
+
+          <!-- Education 2: BCA -->
+          <div class="edu-card glass-panel animate-fade-in-up delay-2">
+            <div class="edu-card-top">
+              <div class="edu-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                </svg>
+              </div>
+              <span class="edu-status-badge completed">Completed</span>
+            </div>
+            <h3 class="edu-degree text-gradient">Bachelor of Computer Applications (BCA)</h3>
+            <div class="edu-school">University of Lucknow</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CERTIFICATIONS SECTION
+           ============================================================ -->
+      <section id="certifications" class="certifications">
+        <div class="section-header animate-fade-in-up">
+          <span class="section-subtitle">Credentials</span>
+          <h2 class="section-title text-gradient">Certifications</h2>
+        </div>
+
+        <div class="certifications-grid">
+          <!-- Cert 1: Prompt Engineering -->
+          <div class="cert-card glass-panel animate-fade-in-up delay-1"
+               data-cert-img="prompt-engineering.png"
+               data-cert-title="Prompt Engineering"
+               role="button"
+               tabindex="0"
+               aria-label="View Prompt Engineering certificate issued by Infosys">
+            <div class="cert-image-wrapper">
+              <img src="prompt-engineering.png" alt="Prompt Engineering Certificate — Infosys" />
+              <div class="cert-view-overlay" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                View Certificate
+              </div>
+            </div>
+            <div class="cert-card-content">
+              <span class="cert-badge">Infosys</span>
+              <h3 class="cert-title text-gradient">Prompt Engineering</h3>
+              <p class="cert-issuer">Issuing Organization: Infosys</p>
+              <button class="cert-view-btn" aria-label="Open Prompt Engineering certificate lightbox">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                View Certificate
+              </button>
+            </div>
+          </div>
+
+          <!-- Cert 2: Python Full Stack Development -->
+          <div class="cert-card glass-panel animate-fade-in-up delay-2"
+               data-cert-img="python-full-stack.png"
+               data-cert-title="Python Full Stack Development"
+               role="button"
+               tabindex="0"
+               aria-label="View Python Full Stack Development certificate issued by Infosys">
+            <div class="cert-image-wrapper">
+              <img src="python-full-stack.png" alt="Python Full Stack Development Certificate — Infosys" />
+              <div class="cert-view-overlay" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                View Certificate
+              </div>
+            </div>
+            <div class="cert-card-content">
+              <span class="cert-badge">Infosys</span>
+              <h3 class="cert-title text-gradient">Python Full Stack Development</h3>
+              <p class="cert-issuer">Issuing Organization: Infosys</p>
+              <button class="cert-view-btn" aria-label="Open Python Full Stack Development certificate lightbox">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                View Certificate
+              </button>
+            </div>
+          </div>
+
+          <!-- Cert 3: Generative AI -->
+          <div class="cert-card glass-panel animate-fade-in-up delay-3"
+               data-cert-img="generative-ai.png"
+               data-cert-title="Generative AI"
+               role="button"
+               tabindex="0"
+               aria-label="View Generative AI certificate issued by Infosys">
+            <div class="cert-image-wrapper">
+              <img src="generative-ai.png" alt="Generative AI Certificate — Infosys" />
+              <div class="cert-view-overlay" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                View Certificate
+              </div>
+            </div>
+            <div class="cert-card-content">
+              <span class="cert-badge">Infosys</span>
+              <h3 class="cert-title text-gradient">Generative AI</h3>
+              <p class="cert-issuer">Issuing Organization: Infosys</p>
+              <button class="cert-view-btn" aria-label="Open Generative AI certificate lightbox">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                View Certificate
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CERTIFICATE LIGHTBOX MODAL
+           ============================================================ -->
+      <div class="cert-lightbox" id="cert-lightbox" role="dialog" aria-modal="true" aria-label="Certificate Viewer">
+        <div class="cert-lightbox-inner" id="cert-lightbox-inner">
+          <button class="cert-lightbox-close" id="cert-lightbox-close" aria-label="Close certificate viewer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <div class="cert-lightbox-img-wrap">
+            <img class="cert-lightbox-img" id="cert-lightbox-img" src="" alt="" />
+          </div>
+          <div class="cert-lightbox-info">
+            <span class="cert-lightbox-badge">Infosys</span>
+            <span class="cert-lightbox-title" id="cert-lightbox-title"></span>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
-      <h2>Contact Me</h2>
-      <form
-        action="mailto:anuruddhyadav933@gmail.com"
-        method="POST"
-        enctype="text/plain"
-      >
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea
-          name="message"
-          rows="5"
-          placeholder="Your Message"
-          required
-        ></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
+      <!-- ============================================================
+           CONTACT SECTION
+           ============================================================ -->
+      <section id="contact" class="contact">
+        <div class="section-header">
+          <span class="section-subtitle">Collaboration</span>
+          <h2 class="section-title text-gradient">Contact Me</h2>
+        </div>
 
-    <!-- Footer -->
+        <div class="contact-container">
+          <!-- Left: Info -->
+          <div class="contact-info">
+            <div>
+              <h3 class="contact-headline text-gradient">Let's build something next-gen.</h3>
+              <p style="color: var(--text-gray); margin-bottom: 1.75rem; font-size: 0.95rem; line-height: 1.65;">
+                Have a full-stack system layout or an AI module to prototype?
+                Feel free to reach out. I'll respond within 24 hours.
+              </p>
+
+              <div class="contact-details">
+                <!-- Email -->
+                <div class="contact-detail-item">
+                  <div class="contact-detail-icon" aria-hidden="true">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div class="contact-detail-text">
+                    <h4>Email</h4>
+                    <a href="mailto:anuruddhyadav933@gmail.com">anuruddhyadav933@gmail.com</a>
+                  </div>
+                </div>
+
+                <!-- Location -->
+                <div class="contact-detail-item">
+                  <div class="contact-detail-icon" aria-hidden="true">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div class="contact-detail-text">
+                    <h4>Location</h4>
+                    <p>Uttar Pradesh, India</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links">
+              <a href="https://github.com/TechAnuruddh" class="social-link" target="_blank" rel="noopener" aria-label="GitHub Profile">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/anuruddh-yadav-258150328/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Contact Form -->
+          <form class="contact-form glass-panel" id="contact-form" novalidate>
+            <!-- Status Alert -->
+            <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
+
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Full Name</label>
+              <input
+                type="text"
+                id="contact-name"
+                name="name"
+                class="form-input"
+                placeholder="e.g. John Doe"
+                autocomplete="name"
+              />
+              <span class="field-error" id="name-error">Please enter your full name (at least 2 characters).</span>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Email Address</label>
+              <input
+                type="email"
+                id="contact-email"
+                name="email"
+                class="form-input"
+                placeholder="e.g. john@example.com"
+                autocomplete="email"
+              />
+              <span class="field-error" id="email-error">Please enter a valid email address.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Message</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                class="form-input"
+                placeholder="Discussing a new project or role..."
+              ></textarea>
+              <span class="field-error" id="message-error">Please enter a message (at least 10 characters).</span>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
     <footer>
-      <p>© 2025 Anuruddh Yadav | Built with ❤️</p>
-      <p>
-        Connect on
-        <a href="https://github.com/TechAnuruddh" target="_blank">GitHub</a> |
-        <a
-          href="https://www.linkedin.com/in/anuruddh-yadav-258150328/"
-          target="_blank"
-          >LinkedIn</a
-        >
-      </p>
+      <div class="footer-content">
+        <a href="#home" class="footer-logo">
+          <span>TechAnuruddh</span>
+        </a>
+        <p class="footer-text">
+          &copy; 2026 Anuruddh Yadav. Engineered for performance and scale.
+        </p>
+        <div class="footer-links">
+          <a href="https://github.com/TechAnuruddh" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/anuruddh-yadav-258150328/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
     </footer>
 
-    <!-- JS File -->
+    <!-- Scripts -->
     <script src="app.js"></script>
   </body>
 </html>
